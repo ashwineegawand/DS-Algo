@@ -1,0 +1,28 @@
+Selection Sort =>
+                 - NOT STABLE
+
+Bubble Sort => 
+                - STABLE
+                
+Insertion sort => 
+            - STABLE (when we are not swapping same values)                
+
+MergeSort => 
+            - T(N) = O(N log N) => for best, average and worst case
+            - NOT in place (note -> call stack space also being used)
+            - It is STABLE
+
+
+Quick Sort => 
+            - T(N) = O(N log N) => for best and average case
+              T(N) = O(n^2) => for worst case  (which is very unlikely though)
+            - IN Place  (note -> call stack space also being used)
+            - faster in emprical analysis
+
+Note: Java used QuickSort for primitive types and MergeSort (TimSort) for Objects.
+
+        
+
+
+
+            

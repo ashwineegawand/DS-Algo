@@ -45,7 +45,7 @@ function mergeTest(arr1, arr2) {
     let aux = [];
 
     while(p1<arr1.length && p2<arr2.length) {
-        if(arr1[p1] < arr2[p2]) {
+        if(arr1[p1] <= arr2[p2]) {
             aux.push(arr1[p1]);
             p1++;
         } else {
@@ -55,10 +55,12 @@ function mergeTest(arr1, arr2) {
     }
     while(p1<arr1.length) {
         aux.push(arr1[p1]);
+        p1++
     }
 
     while(p2<arr2.length) {
         aux.push(arr2[p2]);
+        p2++
     }
 }
 
