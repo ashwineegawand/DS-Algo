@@ -1,31 +1,21 @@
-function selectionSort(array) {
-    for(let i = 0; i < array.length; i++) {
-        let min = i;
-        for(let j = i+1; j < array.length; j++) {
-            if(array[j] < array[min]) {
-                min = j;
+
+//selection Sort -> start placing minimum element from left
+//T(N) = O(N^2)
+//NOT stable
+//In place
+//Time Limit Exceeded
+ function selectionSort(nums) {
+    for (let i=0; i<nums.length; i++) {
+        let minIndex = i;
+        for(let j=i+1; j<nums.length; j++) {
+            if(nums[j] < nums[minIndex]) {
+                minIndex = j
             }
         }
-        const temp = array[i];
-        array[i] = array[min];
-        array[min] = temp;
+        //swap
+        [nums[i],nums[minIndex]] = [nums[minIndex], nums[i]];
     }
-    return array;
-}
+    return nums;
+};
 
 console.log(selectionSort([4,6,8,9,2,1,2,2,2,20]));
-
-function selectionSort1(arr) {
-    for(let i=0; i<arr.length; i++) {
-        let min = i;
-        for(let j=i+1; j<arr.length; j++) {
-            if(arr[j] < arr[min]) {
-                min = j;
-            }
-        }
-        [arr[min], arr[i]] = [arr[i], arr[min]]
-    }
-    return arr;
-}
-
-console.log(selectionSort1([4,6,8,9,2,1,2,2,2,20]));
