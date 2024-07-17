@@ -42,6 +42,22 @@ Heap Sort =>
                            decreases (because as mentioned, heapifyDown actually takes O(h) where h is the height of the heap). So rather than O(n log n), it amounts to O(n).
 
             Heap Sort
+                    reference:  https://reginafurness.medium.com/implementing-heap-sort-in-javascript-e52683b54935
+                    
+                    To analyze the time complexity of heap sort, we break down each step.
+
+                    1) Turn the array into a max heap (build Heap) => O(N)
+                    2) Iterate through the array, on each iteration:
+                                a. Swap elements  => O(1)
+                                b. Re-heapify the array => O(lon N)
+
+                                So we have => O(n) + O(n * (1 * log n)) => O(N log N)
+
+                    Space complexity => O(1) -> in place
+                    Not stable
+
+
+                    Heap sort isn’t see very often in the real world, but it could be useful for embedded systems where you’re working with little memory, because it takes O(1) space in memory. In addition to that, its best, worst, and average time complexity are all O(n log n), so you don’t run the risk of it taking O(n²) like with quick sort. However, heap sort isn’t as fast as quick sort on large arrays, and offers no advantage when handling partially/mostly sorted arrays. 
            
 
         

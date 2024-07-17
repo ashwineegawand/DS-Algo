@@ -88,6 +88,7 @@ class MaxHeap {
         for(let i=Math.floor(this.values.length/2); i>=0; i--) {
             this.heapifyDown(i);
         }
+        return this.values;
     }
 
     //return value of Max Heap
@@ -109,8 +110,7 @@ class MaxHeap {
 let maxHeap = new MaxHeap();
 let array = [0, 1, 2, 3, 4, 5]
 
-maxHeap.buildHeap(array);
-
 console.log("input : " + array);
+console.log("Max Heap : " + maxHeap.buildHeap(array));
 console.log(maxHeap.peek());
 console.log(maxHeap.print());
