@@ -15,11 +15,34 @@ MergeSort =>
 
 Quick Sort => 
             - T(N) = O(N log N) => for best and average case
-              T(N) = O(n^2) => for worst case  (which is very unlikely though)
+              T(N) = O(n^2) => for worst case  (which is very unlikely though => O(log N))
             - IN Place  (note -> call stack space also being used)
             - faster in emprical analysis
 
 Note: Java used QuickSort for primitive types and MergeSort (TimSort) for Objects.
+
+
+Heap Sort =>   
+            reference:  https://reginafurness.medium.com/implementing-a-max-heap-in-javascript-b3e2f788390c
+
+            Time Complexity (Max Heap):
+
+                           leftChild, rightChild, parent, sLeaf() => O(1) 
+                           heapifyUp, heapifyDown => O(log n) 
+                           add => O(log n)
+                           extractMax => O(log n) 
+                           print => O(n-l)  l = the number of leaves. In a complete binary tree, 1/2 the nodes are leaves, so you could also say O(1/2n) or simply, O(n).
+                           
+                           buildHeap => O(n)
+                           At the bottom level, the leaves can not be pushed down any further
+                           At the second most bottom level, the nodes can at most be pushed down one level
+                           At the third most bottom level, the nodes can at most be pushed down two levels
+                           As we move up the heap, they can each be pushed down further, but there are less nodes
+                           There are more nodes at each level, but the maximum time that heapifyDown can take, 
+                           decreases (because as mentioned, heapifyDown actually takes O(h) where h is the height of the heap). So rather than O(n log n), it amounts to O(n).
+
+            Heap Sort
+           
 
         
 
