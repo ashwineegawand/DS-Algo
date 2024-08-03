@@ -39,3 +39,5 @@ function heapify(arr, index, length) {
 
 console.log(heapSort([0, 1, 2, 3, 4 ,5]));
 console.log(heapSort([9, 8, -1, 100, 1, 8, 1, 6, 2, 0]));
+console.log(heapSort([99]));
+console.log(heapSort([]));

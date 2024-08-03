@@ -7,7 +7,7 @@ function quickSortHelper(A, start, end) {
     //base case
     if(start >= end) return;
 
-    let pivotIndex = Math.floor(Math.random()*(start + ((end-start)/2)));
+    let pivotIndex = Math.floor(start + (end-start)/2);
 
     [A[pivotIndex], A[start]] = [A[start], A[pivotIndex]];
 

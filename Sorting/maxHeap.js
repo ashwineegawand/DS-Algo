@@ -84,6 +84,7 @@ class MaxHeap {
     }
 
     buildHeap(array) {
+        if(array.length <= 0 ) return array;
         this.values = array;
         for(let i=Math.floor(this.values.length/2); i>=0; i--) {
             this.heapifyDown(i);
