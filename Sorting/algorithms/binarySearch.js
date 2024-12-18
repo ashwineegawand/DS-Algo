@@ -14,5 +14,3 @@ function binarySearch(nums, target) {//given array is sorted, find index of targ
 
     return (nums[index] === target) ? index : -1;
 }
-
-console.log(binarySearch([0, 1, 21, 33, 45, 45, 61, 71, 72, 73], 7));

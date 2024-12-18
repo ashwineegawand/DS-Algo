@@ -58,6 +58,8 @@ Heap Sort =>
 
 
                     Heap sort isn’t see very often in the real world, but it could be useful for embedded systems where you’re working with little memory, because it takes O(1) space in memory. In addition to that, its best, worst, and average time complexity are all O(n log n), so you don’t run the risk of it taking O(n²) like with quick sort. However, heap sort isn’t as fast as quick sort on large arrays, and offers no advantage when handling partially/mostly sorted arrays. 
+
+Binary Searvh => Time -> O(lon N)
            
 
         
