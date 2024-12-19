@@ -12,6 +12,7 @@ class LinkedList {
         this.length = 0;
     }
 
+    //get length
     getLength() {
         let current = this.head;
         while(current) {
@@ -95,7 +96,7 @@ class LinkedList {
         let current = this.head; 
         
         while(current) {
-            if(pos === 1) {
+            if(pos === 1) {//we can call here shift as well
                 this.head = newNode;
                 newNode.next = current;
                 this.length++;
@@ -128,7 +129,7 @@ class LinkedList {
         
         while(current) {
             if(counter === pos) {
-                if(prev === null) {
+                if(prev === null) { //if pos = 1 i.e. head //or we can call here unshift
                     this.head = current.next;
                     this.length--;
                     return;
